@@ -10,7 +10,7 @@ LCtrl::CapsLock
 LWin::LCtrl
 CapsLock::LWin
 
-;Emacs
+;Emacs - Cursor Move
 CapsLock & f::
   send, {Right down}{Right up}
 Return
@@ -22,4 +22,18 @@ CapsLock & n::
 Return
 CapsLock & p::
   send, {Up down}{Up up}
+Return
+
+;Emacs - Home, End, Delete
+CapsLock & e::
+  send, {End down}{End up}
+Return
+CapsLock & a::
+  send, {Home down}{Home up}
+Return
+CapsLock & k::
+  send, {Shift down}
+  send, {End down}{End up}
+  send, {Shift up}
+  send, {Backspace down}{Backspace up}
 Return
