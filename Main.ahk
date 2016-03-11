@@ -4,11 +4,13 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 ;Win - Command
-;Ctrl - CapsLock
+;Ctrl - Meta
 ;Caps - Control
+;Menu - Win
 LCtrl::CapsLock
 LWin::LCtrl
-CapsLock::LWin
+*CapsLock::LCtrl
+AppsKey::LWin
 
 ;Emacs - Cursor Move
 CapsLock & f::
