@@ -9,7 +9,6 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ;Menu - Win
 LCtrl::CapsLock
 LWin::LCtrl
-*CapsLock::LCtrl
 AppsKey::LWin
 
 ;Emacs - Cursor Move
@@ -39,3 +38,32 @@ CapsLock & k::
   send, {Shift up}
   send, {Backspace down}{Backspace up}
 Return
+
+CapsLock & d::
+  send, {Delete down}
+  send, {Delete up}
+Return
+
+CapsLock & h::
+  send, {Backspace down}
+  send, {Backspace up}
+Return
+
+;Disable Unused CapsLock Shortcuts
+CapsLock & c::return
+CapsLock & g::return
+CapsLock & i::return
+CapsLock & j::return
+CapsLock & l::return
+CapsLock & m::return
+CapsLock & o::return
+CapsLock & q::return
+CapsLock & r::return
+CapsLock & s::return
+CapsLock & t::return
+CapsLock & u::return
+CapsLock & v::return
+CapsLock & w::return
+CapsLock & x::return
+CapsLock & y::return
+CapsLock & z::return
