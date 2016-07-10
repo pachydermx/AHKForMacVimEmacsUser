@@ -5,7 +5,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 ;Win - Command
 ;Ctrl - Meta
-;Caps - Control
+CapsLock::LCtrl
 ;Menu - Win
 LCtrl::CapsLock
 LWin::LCtrl
@@ -49,6 +49,13 @@ CapsLock & h::
   send, {Backspace up}
 Return
 
+!+3::
+  SendInput, {LWin down}
+  SendInput, {PrintScreen down}
+  SendInput, {PrintScreen up}
+  SendInput, {LWin up}
+return
+
 ;Disable Unused CapsLock Shortcuts
 CapsLock & c::return
 CapsLock & g::return
@@ -67,3 +74,13 @@ CapsLock & w::return
 CapsLock & x::return
 CapsLock & y::return
 CapsLock & z::return
+CapsLock & 1::return
+CapsLock & 2::return
+CapsLock & 3::return
+CapsLock & 4::return
+CapsLock & 5::return
+CapsLock & 6::return
+CapsLock & 7::return
+CapsLock & 8::return
+CapsLock & 9::return
+CapsLock & 0::return
